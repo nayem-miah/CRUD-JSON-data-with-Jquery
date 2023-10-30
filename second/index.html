@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON to HTML Table</title>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+
+            <div class="card my-3">
+                 
+                <div  style="background-color: #fff !important;" class="card-header d-flex justify-content-between align-items-center">
+                    <h4>COURSE</h4>
+                    <button type="button" class="btn btn-primary rounded-pill"" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap"> <i class="fa-solid fa-circle-plus"></i>  Add </button>
+                </div>
+
+                <div  style="background-color: #fff !important; border-bottom: 0px solid rgba(0,0,0,.125) !important;" class="card-header mt-2 d-flex justify-content-between align-items-center">
+                    <div class="position-relative d-flex">
+                       <p class="m-2">Show</p>
+                            <select name="example_length" aria-controls="example" class="form-select"">
+                                <option value="10">10</option>
+                                <option value="25">25</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                            </select>
+                       <p class="m-2">Entries</p>
+
+                    </div>
+                    <div class="d-flex">
+                        <p class="m-2">Search: </p>
+                       <input type="text">
+                    </div>
+                </div>
+                    
+     
+                
+                <div class="card-body">
+              
+                    <table class="table-bordered table table-striped" id="data-table">
+                        <thead>
+                            <tr class="bg-info" id="trTag">
+                                <th>SL</th>
+                                <th>Course Level</th>
+                                <th>Course Code</th>
+                                <th>Title</th>
+                              
+                                <th>Group</th>
+                                <th>Marks</th>
+                                <th>Action</th>
+             
+                                <!-- Add more table headers as needed -->
+                            </tr>
+                        </thead>
+
+
+                        <!-- add modal      -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Add</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form id="myForm">
+                                    <div class="mb-3">
+                                        <input class="form-control" type="number" id="newItem" placeholder="Course Number" name="Course_number">
+                                    </div>
+                                    <div class="mb-3">
+                                        <input class="form-control" type="text" id="newItem" placeholder="Course Level" name="Course_Level">
+                                    </div>
+                                    <div class="mb-3">
+                                        <input class="form-control" type="text" id="newItem" placeholder="Course code" name="Course_code">
+                                    </div>
+                                    <div class="mb-3">
+                                        <input class="form-control" type="text" id="newItem" placeholder="Title" name="Course_title">
+                                    </div>
+                                    <div class="mb-3">
+                                        <input class="form-control" type="text" id="newItem" placeholder="Group" name="Course_group">
+                                    </div>
+                                    <div class="mb-3">
+                                        <input class="form-control" type="number" id="newItem" placeholder="Marks" name="Course_marks">
+                                    </div>
+                                
+                                 
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button id="submitBtn" type="submit" class="btn btn-primary">Add</button>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- update modal  -->
+                        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Update</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form id="updateForm">
+                                        <div class="mb-3">
+                                            <input class="form-control" type="text" id="updateNum" placeholder="Course Number"  name="Course_number">
+                                        </div>
+                                        <div class="mb-3">
+                                            <input class="form-control" type="text" id="updateLev" placeholder="Course Level" name="Course_Level">
+                                        </div>
+                                        <div class="mb-3">
+                                            <input class="form-control" type="text" id="updateCode" placeholder="Course code"  name="Course_Code">
+                                        </div>
+                                        <div class="mb-3">
+                                            <input class="form-control" type="text" id="updateTitle" placeholder="Title" name="Course_title">
+                                        </div>
+                                        <div class="mb-3">
+                                            <input class="form-control" type="text" id="updateGroup" placeholder="Group" name="Course_group">
+                                        </div>
+                                        <div class="mb-3">
+                                            <input class="form-control" type="text" id="updateMarks" placeholder="Marks" name="Course_marks">
+                                        </div>
+                                     
+                                        </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button id="updateButton" type="button" class="btn btn-primary">Update</button>
+                                </div>
+                                </div>
+                            </div>
+
+                            
+                        </div>
+
+
+
+
+                        <tbody id="table-body">
+
+
+                            <!-- Data will be inserted here -->
+                  
+                        
+                        </tbody>
+                    </table>
+                    
+                
+
+                    <div id="pagination">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-center m-3">
+            
+                      
+                            </ul>
+                        </nav>
+                    </div>
+                    
+
+            
+            
+                </div>
+              </div>
+
+     </div>
+</div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+

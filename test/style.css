@@ -1,0 +1,52 @@
+#pagination-container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+#data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#data-table th, #data-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+#data-table th {
+    background-color: #f2f2f2;
+}
+
+#pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.pagination {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pagination li {
+    margin: 0 5px;
+}
+
+.pagination-link {
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    background-color: #f2f2f2;
+    color: #333;
+    cursor: pointer;
+}
+
+.pagination-link:hover {
+    background-color: #333;
+    color: #fff;
+}

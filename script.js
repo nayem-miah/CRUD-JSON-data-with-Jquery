@@ -28,7 +28,7 @@ $(document).ready(function() {
         $('#data-table').on('click', '#btnDlt', function() {
             $(this).closest('tr').remove();
         });
-
+4
 
         $.getJSON('data.json', function(data) {
             var table = $('#data-table tbody');
@@ -56,6 +56,11 @@ $(document).ready(function() {
                 });
       
           });
+
+
+
+
+            
 
 });
 

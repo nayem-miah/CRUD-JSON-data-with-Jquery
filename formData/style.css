@@ -1,0 +1,85 @@
+/* Apply styles to the body element */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Style a header element, e.g., <header> or <div id="header"> */
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  /* Style a navigation menu */
+  nav {
+    background-color: #444;
+  }
+  
+  /* Style navigation links */
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+  }
+  
+  /* Change link color on hover */
+  nav a:hover {
+    color: #ff9900;
+  }
+  
+  /* Style a section or main content area */
+  section {
+    padding: 20px;
+  }
+  
+  /* Style a button element */
+  button {
+    background-color: #0077cc;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  /* Change button color on hover */
+  button:hover {
+    background-color: #005599;
+  }
+  
+  /* Apply styles to a form input */
+  input[type="text"], input[type="email"], input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Style a table */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  /* Style table headers */
+  th {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  /* Style table cells */
+  td {
+    border: 1px solid #ddd;
+    padding: 10px;
+  }
+  
+  /* Add a class to style specific elements */
+  .custom-class {
+    /* Define your custom styles here */
+  }
+  

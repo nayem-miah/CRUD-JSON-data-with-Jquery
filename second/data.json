@@ -1,0 +1,126 @@
+[
+    {
+        "no": "1",
+        "courseLevel": "প্রাথমিক (বাংলা)",
+        "courseCode": "bt1",
+        "subject": "Bangla",
+        "group": "class 12",
+        "marks":30
+
+
+    },
+    {
+        "no": "2",
+        "courseLevel": "প্রাথমিক (বাংলা)",
+        "courseCode": "bt2",
+        "subject": "English",
+        "group": "class I",
+        "marks":49
+
+    },
+    {
+        "no": "3",
+        "courseLevel": "প্রাথমিক (বাংলা)",
+        "courseCode": "bt3",
+        "subject": "Math",
+        "group": "class II",
+        "marks":65
+
+    },
+    
+
+{
+    "no":"4",
+    "courseLevel":"প্রাথমিক (বাংলা)",
+    "courseCode": "bt4",
+    "subject":"ICT",
+    "group": "class II",
+    "marks":43
+
+},
+{
+    "no": "5",
+    "courseLevel": "প্রাথমিক (বাংলা)",
+    "courseCode": "bt5",
+    "subject": "Bangla",
+    "group": "class 12",
+    "marks":30
+
+
+},
+{
+    "no": "6",
+    "courseLevel": "প্রাথমিক (বাংলা)",
+    "courseCode": "bt6",
+    "subject": "English",
+    "group": "class I",
+    "marks":49
+
+},
+{
+    "no": "7",
+    "courseLevel": "প্রাথমিক (বাংলা)",
+    "courseCode": "bt7",
+    "subject": "Math",
+    "group": "class II",
+    "marks":65
+
+
+},
+{
+    "no":"8",
+    "courseLevel":"প্রাথমিক (বাংলা)",
+    "courseCode": "bt8",
+    "subject":"ICT",
+    "group": "class II",
+    "marks":43
+
+},
+{
+    "no":"9",
+    "courseLevel":"প্রাথমিক (বাংলা)",
+    "courseCode": "bt9",
+    "subject":"ICT",
+    "group": "class II",
+    "marks":43
+
+},
+{
+    "no": "10",
+    "courseLevel": "প্রাথমিক (বাংলা)",
+    "courseCode": "bt10",
+    "subject": "Bangla",
+    "group": "class 12",
+    "marks":30
+
+
+},
+{
+    "no": "11",
+    "courseLevel": "প্রাথমিক (বাংলা)",
+    "courseCode": "bt11",
+    "subject": "English",
+    "group": "class I",
+    "marks":49
+
+},
+{
+    "no": "12",
+    "courseLevel": "প্রাথমিক (বাংলা)",
+    "courseCode": "bt12",
+    "subject": "Math",
+    "group": "class II",
+    "marks":65
+
+
+},
+{
+    "no":"13",
+    "courseLevel":"প্রাথমিক (বাংলা)",
+    "courseCode": "bt13",
+    "subject":"ICT",
+    "group": "class II",
+    "marks":43
+
+}
+]
