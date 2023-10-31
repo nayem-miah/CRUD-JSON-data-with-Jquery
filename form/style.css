@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    /* margin: 0% 10% 0% 10%; */
+    padding: 0;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 280px;
+  
+}
+
+@media print and (max-width: 900px) {
+    /* CSS rules for screens with a maximum width of 768px */
+
+    .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 5px;
+
+        }
+  }
+
+
+  @media screen and (max-width: 768px) {
+    /* CSS rules for screens with a maximum width of 768px */
+
+    .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 5px;
+
+        }
+  }
+
+/* Style the logo */
+.logo {
+    max-width: 100%;
+    height: auto;
+}
+/* Style the text column */
+.text {
+    text-align: center;
+}
+/* Style the picture column */
+.picture {
+    text-align: center;
+}
+
+
+p {
+    line-height: 0px; /* 150% of the font size */
+  }
+
+
+
+
+
+
+
+.wrapper {
+    width: 100%;
+    padding-right: var(--bs-gutter-x,.75rem);
+    padding-left: var(--bs-gutter-x,.75rem);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+.row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+}
+
+
+.column {
+   
+    padding: 20px;
+}
+
+.dashed_border{
+
+  
+    border-bottom: 1.5px dashed #000000;/* Add a bottom border */
+
+
+    background-color: white;
+
+}
+
+
+
+
+
+/* custom.................... */
+
+.containerCustom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid; place-items: center;
+
+}
+
+.rowCustom {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+}
+
+.col {
+
+  
+    margin: 2px;
+    padding: 2px;
+    display: flex;
+
+}
+
+/* .element{
+    display: inline-block;
+    max-width: 100%;
+} */
