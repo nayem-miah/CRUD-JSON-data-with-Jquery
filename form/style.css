@@ -3,6 +3,8 @@ body {
     /* margin: 0% 10% 0% 10%; */
     padding: 0;
 }
+
+
 .container {
     display: flex;
     justify-content: space-between;
@@ -44,6 +46,7 @@ body {
 /* Style the text column */
 .text {
     text-align: center;
+    margin-top: 25px;
 }
 /* Style the picture column */
 .picture {
@@ -52,11 +55,8 @@ body {
 
 
 p {
-    line-height: 0px; /* 150% of the font size */
+    line-height: 0%; 
   }
-
-
-
 
 
 
@@ -78,10 +78,6 @@ p {
 }
 
 
-.column {
-   
-    padding: 20px;
-}
 
 .dashed_border{
 
@@ -104,12 +100,14 @@ p {
     margin: 0 auto;
     padding: 20px;
     display: grid; place-items: center;
+    margin-top: -50PX;
 
 }
 
 .rowCustom {
     display: flex;
     flex-wrap: wrap;
+    margin:  -6.7px;
     /* justify-content: space-between; */
 }
 
@@ -122,7 +120,15 @@ p {
 
 }
 
-/* .element{
-    display: inline-block;
-    max-width: 100%;
-} */
+
+table {
+    border-collapse: collapse;
+    width: 600px
+
+  }
+
+  th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+  }
