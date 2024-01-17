@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Data Collection</title>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+
+  <form id="myForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" value="John Doe"><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" value="john@example.com"><br>
+
+    <input type="submit" value="Submit">
+  </form>
+
+  <script>
+    $(document).ready(function() {
+      $('#myForm').submit(function(e) {
+        e.preventDefault();
+
+        var formData = [];
+        $(this).find(':input').each(function() {
+          var inputObject = {
+            name: this.name,
+            value: $(this).val()
+          };
+          formData.push(inputObject);
+        });
+
+        console.log(formData);
+
+        // You can send the formData array to the server using AJAX or perform any other actions.
+      });
+    });
+  </script>
+
+</body>
+</html>

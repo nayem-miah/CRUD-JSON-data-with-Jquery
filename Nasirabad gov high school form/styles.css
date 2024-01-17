@@ -1,0 +1,42 @@
+
+Form input,
+Form label {
+  margin: 10px 0px;
+  
+}
+
+.container-class{
+  background-color: #ffd57f
+}
+
+.small-image1 {
+  width: 170px; /* Set the desired width */
+  height: auto; /* Auto adjust height to maintain aspect ratio */
+}
+
+.small-image{
+  width: 120px; /* Set the desired width */
+  height: auto; /* Auto adjust height to maintain aspect ratio */
+}
+
+
+/* Custom CSS */
+.custom-border {
+  border-right: 1.5px solid hsl(39, 100%, 50%); /* Orange border color */
+}
+
+.image-container {
+  border: 2px solid #ffd57f; /* Set border properties */
+
+  background-image: url('path_to_your_image.jpg'); /* Set the image as the background */
+  background-size: cover; /* Adjust image size */
+  
+
+}
+
+
+p, label {
+  font-weight: bold;
+ 
+}
+

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Countdown Timer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    h1 {
+      color: #333;
+    }
+    #timerDisplay {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+    input {
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 8px 20px;
+      margin: 5px;
+      cursor: pointer;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 4px;
+    }
+    button:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Countdown Timer</h1>
+<p id="timerDisplay">00:00:00</p>
+<input type="number" id="hoursInput" placeholder="Hours">
+<input type="number" id="minutesInput" placeholder="Minutes">
+<input type="number" id="secondsInput" placeholder="Seconds">
+<button onclick="startCountdown()">Start Countdown</button>
+<button onclick="stopCountdown()">Stop</button>
+<button onclick="resetCountdown()">Reset</button>
+
+<script>
+let countdownInterval;
+let hours = 0, minutes = 0, seconds = 1;
+
+function startCountdown() {
+  hours = parseInt(document.getElementById("hoursInput").value) || 0;
+  minutes = parseInt(document.getElementById("minutesInput").value) || 0;
+  seconds = parseInt(document.getElementById("secondsInput").value) || 0;
+
+
+
+
+  if (hours === 0 && minutes === 0 && seconds === 0) {
+    alert("Please enter a valid duration.");
+    return;
+  }
+
+  updateDisplay();
+  countdownInterval = setInterval(updateCountdown, 1000);
+}
+
+
+console.log(seconds)
+function stopCountdown() {
+  clearInterval(countdownInterval);
+}
+
+function resetCountdown() {
+  clearInterval(countdownInterval);
+  hours = 0;
+  minutes = 0;
+  seconds = 0;
+  updateDisplay();
+}
+
+function updateCountdown() {
+  if (hours === 0 && minutes === 0 && seconds === 0) {
+    clearInterval(countdownInterval);
+    alert("Countdown finished!");
+    return;
+  }
+
+  if (seconds > 0) {
+    seconds--;
+  } else {
+    if (minutes > 0) {
+      minutes--;
+      seconds = 59;
+    } else {
+      if (hours > 0) {
+        hours--;
+        minutes = 59;
+        seconds = 59;
+      }
+    }
+  }
+  updateDisplay();
+}
+
+function updateDisplay() {
+
+  console.log(seconds)
+  const formattedTime = pad(hours) + ":" + pad(minutes) + ":" + pad(seconds);
+  document.getElementById("timerDisplay").innerText = formattedTime;
+}
+
+function pad(value) {
+
+
+  return value < 10 ? "0" + value : value;
+}
+</script>
+
+</body>
+</html>
