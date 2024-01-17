@@ -7,8 +7,9 @@ $(document).ready(function() {
         const itemsPerPage = 10;
         let currentPage = 1;
 
+
   
-        //  data, tableBody, itemsPerPage,currentPage
+    //  data, tableBody, itemsPerPage,currentPage
         function displayData(items,wrapper,rowsPerPage, page) {
     
             wrapper.html('');
@@ -84,6 +85,14 @@ $(document).ready(function() {
 
 
 
+
+
+
+
+
+
+
+
 // delete confirmation.....................
     function confirmFun(row) {
     
@@ -99,8 +108,9 @@ $(document).ready(function() {
 
 
 // Function to delete a row
-   $('#data-table').on('click', '#btnDlt', function() {
+   $('#table-body').on('click', '#btnDlt', function() {
     // $(this).closest('tr').remove();
+
     const row =$(this).closest('tr')
     confirmFun(row)
 
@@ -186,8 +196,7 @@ $(document).ready(function() {
       });
 
 
-
-    
+ 
 
 
 });

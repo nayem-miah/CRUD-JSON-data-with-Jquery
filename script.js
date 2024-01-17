@@ -18,8 +18,29 @@ $(document).ready(function() {
                     '</tr>';
 
                 table.append(row);
-            });   
+            });
             
+            
+   
+    
+    
+            //    Function to update a row
+            $('#data-table').on('click', '#btnUpdate', function() {
+                const primaryKey = $(this).closest("tr").children().html();
+                
+                        $.each(data, function(index,item){
+                        
+                            if (item.no == primaryKey){
+                    
+                                $("#updateNo").val(item.no)
+                                $("#updateTitle").val(item.Name)
+                            
+                            }
+                            
+                        });
+               });
+
+    
         });
 
     
@@ -29,36 +50,6 @@ $(document).ready(function() {
             $(this).closest('tr').remove();
         });
 4
-
-        $.getJSON('data.json', function(data) {
-            var table = $('#data-table tbody');
-            
-
-
-                //    Function to update a row
-                $('#data-table').on('click', '#btnUpdate', function() {
-
-                    const primaryKey = $(this).closest("tr").children().html();
-                    
-
-                            $.each(data, function(index,item){
-                            
-                                if (item.no == primaryKey){
-                        
-
-                                    $("#updateNo").val(item.no)
-                                    $("#updateTitle").val(item.Name)
-                                
-                                }
-                                
-                            });
-                
-                });
-      
-          });
-
-
-
 
             
 
